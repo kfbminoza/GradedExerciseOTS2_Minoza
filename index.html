@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="inp()">
+    <script>
+
+        function inp(){
+            var a = parseInt(prompt("Side A: "));
+            var b = parseInt(prompt("Side B: "));
+            var c = parseInt(prompt("Side C: "));
+            determineTriangle(a, b, c);
+        }
+        
+        function determineTriangle(a, b, c){
+            if(isNaN(a)||isNaN(b)||isNaN(c)){
+                window.alert("Enter Real Numbers Only Or I'm Getting Mad >:(");
+                return;
+            }
+
+            if(a===b&&b===c){
+                window.alert("The triangle is EQUILATERAL.");
+            }
+
+            else if(a===b||b===c||a===c){
+                window.alert("The triangle is ISOSCELES.");
+            }
+
+            else{
+                window.alert("The triangle is SCALENE.")
+            }
+        }
+        
+    </script>
+    <p id="determineTriangle"></p>
+</body>
+</html>
